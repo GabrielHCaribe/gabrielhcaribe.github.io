@@ -1,16 +1,15 @@
-import { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/portfolio', // Ensure this is your repo name
+  basePath: '/portfolio', 
   images: {
     unoptimized: true,
   },
-  // @ts-ignore
+  // Next.js 16 specific way to bypass checks
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // @ts-ignore
   typescript: {
     ignoreBuildErrors: true,
   },

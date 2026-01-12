@@ -5,43 +5,51 @@ import { useRouter } from 'next/navigation';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
+// 1. Define the projects data outside the component so it can be used by the static generator
+const projects: { [key: string]: { title: string; description: string; tags: string[] } } = {
+  '0': {
+    title: "CAN-RXG Team Cristar",
+    description: "A numerical analysis project exploring wave function collapse using Python and NumPy.",
+    tags: ["Physics", "Python", "Simulation"]
+  },
+  '1': {
+    title: "Engineering Statics Tool",
+    description: "Calculates internal forces and moments for complex beam structures under varying loads.",
+    tags: ["Engineering", "MATLAB", "Statics"]
+  },
+  '2': {
+    title: "Data Visualization Lab",
+    description: "Interactive dashboard created to visualize real-time sensor data from lab experiments.",
+    tags: ["React", "Data", "Physics"]
+  },
+  '3': {
+    title: "Thermodynamics Solver",
+    description: "A tool designed to solve multi-stage heat engine efficiency problems automatically.",
+    tags: ["Thermo", "Algorithms"]
+  },
+  '4': {
+    title: "Signal Processing App",
+    description: "Filters and analyzes acoustic signals to determine frequency harmonics.",
+    tags: ["Signals", "Python"]
+  },
+  '5': {
+    title: "Robotics Kinematics",
+    description: "Calculates forward and inverse kinematics for a 3-degree-of-freedom robotic arm.",
+    tags: ["Math", "Robotics"]
+  }
+};
+
+// 2. Add this function to tell Next.js which IDs to pre-render
+export async function generateStaticParams() {
+  return Object.keys(projects).map((id) => ({
+    id: id,
+  }));
+}
+
 export default function ProjectDetail() {
   const params = useParams();
   const router = useRouter();
   const id = params?.id as string;
-
-  const projects: { [key: string]: { title: string; description: string; tags: string[] } } = {
-    '0': {
-      title: "CAN-RXG Team Cristar",
-      description: "A numerical analysis project exploring wave function collapse using Python and NumPy.",
-      tags: ["Physics", "Python", "Simulation"]
-    },
-    '1': {
-      title: "Engineering Statics Tool",
-      description: "Calculates internal forces and moments for complex beam structures under varying loads.",
-      tags: ["Engineering", "MATLAB", "Statics"]
-    },
-    '2': {
-      title: "Data Visualization Lab",
-      description: "Interactive dashboard created to visualize real-time sensor data from lab experiments.",
-      tags: ["React", "Data", "Physics"]
-    },
-    '3': {
-      title: "Thermodynamics Solver",
-      description: "A tool designed to solve multi-stage heat engine efficiency problems automatically.",
-      tags: ["Thermo", "Algorithms"]
-    },
-    '4': {
-      title: "Signal Processing App",
-      description: "Filters and analyzes acoustic signals to determine frequency harmonics.",
-      tags: ["Signals", "Python"]
-    },
-    '5': {
-      title: "Robotics Kinematics",
-      description: "Calculates forward and inverse kinematics for a 3-degree-of-freedom robotic arm.",
-      tags: ["Math", "Robotics"]
-    }
-  };
 
   const project = projects[id];
 
@@ -80,7 +88,7 @@ export default function ProjectDetail() {
             <h1 className="text-6xl font-bold tracking-tight text-white">{project.title}</h1>
           </div>
 
-          {/* Project Content - Similar to About Me */}
+          {/* Project Content */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
             
             {/* Image */}
