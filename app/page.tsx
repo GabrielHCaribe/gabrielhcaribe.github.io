@@ -47,7 +47,7 @@ export default function Home() {
               {/* Changed border to white/10 so it's visible against stars */}
               <div className="w-64 h-80 rounded-2xl overflow-hidden border-4 border-white/10 shadow-2xl">
                 <img 
-                  src="/portfolio/profile.jpg" 
+                  src="/profile.jpg" 
                   alt="Gabriel Caribé" 
                   className="w-full h-full object-cover" 
                 />
