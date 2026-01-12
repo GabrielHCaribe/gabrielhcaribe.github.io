@@ -7,13 +7,6 @@
   --accent-hover: #f97316; /* Orange-500 */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -41,4 +34,19 @@ a {
 
 a:hover {
   color: var(--accent-hover);
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.1);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 4s ease-in-out infinite;
 }
