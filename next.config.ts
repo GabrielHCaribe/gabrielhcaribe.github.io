@@ -2,16 +2,12 @@ import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export',
+  basePath: '/portfolio', // Ensure this is your exact repo name
+  
+  // We are removing the experimental images key and 
+  // nested eslint to satisfy the Next.js 16 compiler
   images: {
     unoptimized: true,
-  },
-  basePath: '/portfolio', // Change this to your repo name
-  // This is the correct way to ignore linting in TS
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
   },
 };
 
