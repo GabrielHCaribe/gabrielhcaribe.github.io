@@ -41,14 +41,29 @@ export default function ProjectClient({ project }: { project: Project }) {
           </div>
 
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20">
-            {/* Project Image */}
+            {/* Project Images Column */}
             <div className="md:w-1/3 flex-shrink-0">
-              <div className="sticky top-32 rounded-3xl overflow-hidden border border-white/10 shadow-2xl aspect-[3/4]">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
+              <div className="flex flex-col gap-6 sticky top-32">
+                {/* If a gallery exists, map through it. Otherwise, show the single main image. */}
+                {project.gallery && project.gallery.length > 0 ? (
+                  project.gallery.map((imgSrc, i) => (
+                    <div key={i} className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                      <img 
+                        src={imgSrc} 
+                        alt={`${project.title} gallery ${i}`}
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                  ))
+                ) : (
+                  <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl aspect-[3/4]">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
               </div>
             </div>
 
