@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Right Side: Social Links */}
           <div className="flex gap-10">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/gabriel-caribe/"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-2 text-zinc-400 hover:text-[#ea580c] transition-all duration-300 text-sm font-semibold"
@@ -27,7 +27,7 @@ export default function Footer() {
               LinkedIn
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/gabrielhcaribe"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-2 text-zinc-400 hover:text-[#ea580c] transition-all duration-300 text-sm font-semibold"
