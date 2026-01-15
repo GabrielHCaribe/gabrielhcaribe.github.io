@@ -100,46 +100,92 @@ export const projects: Project[] = [
       "/box.jpg",
     ],
   },
+  // {
+  //   id: "3",
+  //   title: "Ember Lift",
+  //   shortDescription: "Engineering tool for calculating internal forces in beam structures.",
+  //   content: [
+  //     "I designed the electrical system for my group's Praxis III (Engineering Design and Communication) design project. I this project, I went through all stages of the engineering desing process, from defining requirements to prototyping and testing, resulting in an easy to use, automated system to remove debris from roofs.",
+  //     "After converging to a rooftop tarp system, I selected electrical components based on power, size, and strength requirements, and wired the system to be controlled by Raspberry Pi Picos.",
+  //     "I modeled the entire system in SOLIDWORKS to ensure proper fit and function within the overall mechanical design.",
+  //     "Finally, I led the testing and iteration phase, ensuring the system met all design specifications and functioned reliably under various conditions."
+  //   ],
+  //   tags: ["Electrical Design", "SOLIDWORKS", "Documentation"],
+  //   image: "/ember_lift.jpg",
+  //   gallery: [
+  //     "/ember_lift.jpg",      // Main photo
+  //     "/Prototype_Visual_Abstract.jpg",  // Add more paths here
+  //   ]
+  // },
   {
     id: "3",
-    title: "Ember Lift",
-    shortDescription: "Engineering tool for calculating internal forces in beam structures.",
+    title: "Ember Lift: Automated Wildfire Mitigation",
+    shortDescription: "An electrically-actuated rooftop debris removal system designed to reduce fuel loads in fire-prone regions.",
     content: [
-      "I designed the electrical system for my group's Praxis III (Engineering Design and Communication) design project. I this project, I went through all stages of the engineering desing process, from defining requirements to prototyping and testing, resulting in an easy to use, automated system to remove debris from roofs.",
-      "After converging to a rooftop tarp system, I selected electrical components based on power, size, and strength requirements, and wired the system to be controlled by Raspberry Pi Picos.",
-      "I modeled the entire system in SOLIDWORKS to ensure proper fit and function within the overall mechanical design.",
-      "Finally, I led the testing and iteration phase, ensuring the system met all design specifications and functioned reliably under various conditions."
+      "For my Praxis III (Engineering Design and Communication) cornerstone project, I served as the Lead Electrical Designer for Ember Lift—an automated solution created to protect residential structures from wildfire ignition. The system utilizes an electrically actuated tarp mechanism to clear pine needles and combustible debris from rooftops, directly addressing the 'ember spotting' risk that accounts for numerous structure losses during forest fires.",
+      "I was responsible for the end-to-end electrical architecture, which involved selecting high-torque actuators capable of operating under environmental stress. I developed the control logic using Raspberry Pi Picos, ensuring the system could be triggered reliably with minimal user intervention. My work bridged the gap between mechanical design and automation, resulting in a cohesive, functional prototype.",
+      "To ensure seamless integration with the mechanical assembly, I modeled the entire design in SOLIDWORKS. This facilitated the planning of tarp layouts for different roof geometries, and guided the design of our small-scale prototype. During the final testing phase, I validated the system against rigorous performance requirements for speed, load capacity, and reliability under simulated debris conditions."
     ],
-    tags: ["Electrical Design", "SOLIDWORKS", "Documentation"],
+    tags: ["Mechatronics", "SOLIDWORKS", "Prototyping"],
     image: "/ember_lift.jpg",
     gallery: [
-      "/ember_lift.jpg",      // Main photo
-      "/Prototype_Visual_Abstract.jpg",  // Add more paths here
+      "/ember_lift.jpg",
+      "/Prototype_Visual_Abstract.jpg",
     ]
   },
+  // {
+  //   id: "4",
+  //   title: "Software Projects",
+  //   shortDescription: "Engineering tool for calculating internal forces in beam structures.",
+  //   content: ["Description coming soon!"
+  //     // "1.",
+  //     // "2. Sema carving project: \nDeveloped a C program to reduce image size while maintaining visual integrity using the seam carving algorithm. Implemented dynamic programming techniques to identify and remove low-energy seams, optimizing for horizontal and vertical reductions. The program processes images in PPM format, allowing users to specify target dimensions. Successfully reduced image sizes by up to 50% while preserving key visual features, demonstrating proficiency in C programming and algorithmic problem-solving.",
+
+  //   ],
+  //   tags: ["MATLAB", "Python", "C"],
+  //   image: "/pde.jpg"
+  // },
   {
     id: "4",
-    title: "Software Projects",
-    shortDescription: "Engineering tool for calculating internal forces in beam structures.",
-    content: ["Description coming soon!"
-      // "1.",
-      // "2. Sema carving project: \nDeveloped a C program to reduce image size while maintaining visual integrity using the seam carving algorithm. Implemented dynamic programming techniques to identify and remove low-energy seams, optimizing for horizontal and vertical reductions. The program processes images in PPM format, allowing users to specify target dimensions. Successfully reduced image sizes by up to 50% while preserving key visual features, demonstrating proficiency in C programming and algorithmic problem-solving.",
-
+    title: "Software & Algorithms",
+    shortDescription: "Computational tools implementing advanced algorithms for image processing and natural language analysis.",
+    content: [
+      "PDE Solver: I developed a computational physics solver in MATLAB to analyze the vibration modes of an L-shaped membrane. The program utilizes the Finite Difference Method (FDM) to discretize the Laplacian operator on a non-convex domain, constructing large sparse matrices to represent the structural system. By implementing an eigensolver to extract the smallest eigenvalues and their corresponding eigenfunctions, I was able to model and visualize the resonant frequencies and 'drumhead' displacement patterns. This project highlights my ability to translate complex partial differential equations (PDEs) into efficient numerical simulations using linear algebra and sparse matrix techniques.",
+      "Seam Carving: I developed a content-aware image resizing application in C that implements a Seam Carving algorithm to reduce dimensions while preserving key visual features. By calculating the dual-gradient energy of every pixel, the program identifies low-importance paths, or 'seams,' across the image. I utilized dynamic programming to determine the path of least energy and implemented manual memory management to handle RGB image buffers, successfully optimizing image composition by removing redundant data rather than standard pixel scaling.",
+      "Gomoku AI: I developed a Gomoku Artificial Intelligence in Python that utilizes a strategic scoring engine to play against human opponents. The AI's core logic relies on a comprehensive game-state analysis algorithm that identifies 'open' and 'semi-open' sequences in four directions (horizontal, vertical, and both diagonals). I implemented a heuristic search function that simulates all possible next moves and evaluates them based on a custom weight-based scoring system to determine the optimal strategic position."
     ],
-    tags: ["MATLAB", "Python", "C"],
-    image: "/pde.jpg"
+    tags: ["C Programming", "Python", "MATLAB"],
+    image: "/pde.jpg", // This is a great placeholder name for algorithmic art
+    gallery: [
+      "/pde.jpg"
+    ]
   },
+  // {
+  //   id: "5",
+  //   title: "Bridge Design",
+  //   shortDescription: "Engineering tool for calculating internal forces in beam structures.",
+  //   content: [
+  //     "Wrote MATLAB code to iterate through different bridge designs quickly and perdict failure mode and load.",
+  //     "Final design withstood over 100lbs, outperforming 80% of other designs in the class.",
+  //     "Detailed documentation of design process and final analysis compiled into a comprehensive report."
+  //   ],
+  //   tags: ["Statics", "MATLAB", "Documentation"],
+  //   image: "/bridge.jpg"
+  // }
   {
     id: "5",
-    title: "Bridge Design",
-    shortDescription: "Engineering tool for calculating internal forces in beam structures.",
+    title: "Structural Optimization: Bridge Design",
+    shortDescription: "Computational modeling and physical testing of a beam bridge using MATLAB for structural analysis.",
     content: [
-      "Wrote MATLAB code to iterate through different bridge designs quickly and perdict failure mode and load.",
-      "Final design withstood over 100lbs, outperforming 80% of other designs in the class.",
-      "Detailed documentation of design process and final analysis compiled into a comprehensive report."
+      "In this structural engineering challenge, I developed a MATLAB-based simulation tool to perform iterative stress analysis on various beam bridge cross sections. My code was able to rapidly calculate tensile and compressive forces for loads placed at all locations along the bridge, and predict specific failure modes—such as buckling or tensile fracture, based on material properties and geometric constraints.",
+      "The simulation enabled me to optimize the strength based on material and adhesive quantity constraints. The final physical prototype, constructed from matboard and adhesive, withstood a compressive load exceeding 100 lbs, outperforming 80% of peer designs.",
+      "I compiled the entire design cycle—from initial force diagrams and computational iterations to post-failure analysis—into a comprehensive technical report. This project demonstrated my ability to bridge the gap between abstract mathematical models and real-world physical performance."
     ],
-    tags: ["Statics", "MATLAB", "Documentation"],
-    image: "/bridge.jpg"
+    tags: ["Computational Modeling", "Statics", "MATLAB", "Structural Analysis"],
+    image: "/bridge.jpg",
+    gallery: [
+      "/bridge.jpg",
+    ]
   }
   // Add more projects here as needed...
 ];
