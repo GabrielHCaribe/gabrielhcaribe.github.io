@@ -313,7 +313,7 @@ export default function Navigation() {
               Projects
               {activeSection === 'projects' && <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#ea580c] rounded-full" />}
             </Link>
-            <div className={`absolute left-0 mt-2 w-48 rounded-xl bg-zinc-900 border border-zinc-800 shadow-2xl transition-all duration-300 ${isDropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'}`}>
+            <div className={`absolute left-0 mt-2 w-34 rounded-xl bg-zinc-900 border border-zinc-800 shadow-2xl transition-all duration-300 ${isDropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'}`}>
               <div className="py-2 px-1">
                 {projectItems.map((item) => (
                   <Link key={item.path} href={item.path} className={`block px-4 py-2 text-xs font-medium rounded-lg transition-colors ${pathname === item.path ? 'text-[#ea580c] bg-zinc-800/50' : 'text-zinc-400 hover:text-white hover:bg-zinc-800'}`}>
@@ -359,7 +359,7 @@ export default function Navigation() {
                 ))}
              </div>
           </div>
-          <Link href="mailto:g.caribe@mail.utoronto.ca" className="mt-4 px-10 py-4 bg-white text-black text-lg font-bold rounded-full">
+          <Link href="mailto:g.caribe@mail.utoronto.ca?subject=Reaching out from your Portfolio" className="mt-4 px-10 py-4 justify-center min-w-[60px] bg-white text-black text-lg font-bold rounded-full">
             Contact
           </Link>
         </div>
