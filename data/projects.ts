@@ -148,7 +148,7 @@ export const projects: Project[] = [
   {
     id: "4",
     title: "Software & Algorithms",
-    shortDescription: "Computational tools implementing advanced algorithms for image processing and natural language analysis.",
+    shortDescription: "Computational tools implementing numerical simulations and image modification algorithms.",
     content: [
       "PDE Solver: I developed a computational physics solver in MATLAB to analyze the vibration modes of an L-shaped membrane. The program utilizes the Finite Difference Method (FDM) to discretize the Laplacian operator on a non-convex domain, constructing large sparse matrices to represent the structural system. By implementing an eigensolver to extract the smallest eigenvalues and their corresponding eigenfunctions, I was able to model and visualize the resonant frequencies and 'drumhead' displacement patterns. This project highlights my ability to translate complex partial differential equations (PDEs) into efficient numerical simulations using linear algebra and sparse matrix techniques.",
       "Seam Carving: I developed a content-aware image resizing application in C that implements a Seam Carving algorithm to reduce dimensions while preserving key visual features. By calculating the dual-gradient energy of every pixel, the program identifies low-importance paths, or 'seams,' across the image. I utilized dynamic programming to determine the path of least energy and implemented manual memory management to handle RGB image buffers, successfully optimizing image composition by removing redundant data rather than standard pixel scaling.",
